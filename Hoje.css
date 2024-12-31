@@ -1,0 +1,195 @@
+*{
+
+    /* PARTE DO SLIDE */
+   body{
+    background: linear-gradient(to bottom, #35015a, #d4ccdb);
+        font-family: Arial, sans-serif;
+        
+    }
+    
+    .banner {
+        border: 5px solid rgb(235, 213, 213);
+        border-radius: 30px;
+        width: 95%;
+        
+        margin: auto;
+        margin-top: 60px;
+        overflow: hidden;
+        background: linear-gradient(to bottom, #e0b3f0, #d5006d);
+        box-shadow: 0 0 20px rgba(221, 160, 221, 0.8), 0 0 40px rgba(247, 202, 247, 0.6);
+        position: relative;
+    }
+
+    .slick-slide {
+       
+        border-radius: 30px; /* Bordas arredondadas para cada slide */
+        overflow: hidden; /* Garante que o conteúdo interno não ultrapasse as bordas arredondadas */
+        transition: border-color 0.3s ease; /* Transição suave para a cor da borda */
+    }
+
+    .banner img {
+        width: 100%;
+        height: 600px; /* Altura máxima para o estilo retrato */
+        transition: 0.9s ease; /* Transição suave para o zoom */
+        height: 350px; /* Define a altura da imagem */
+        object-fit: cover; 
+       
+    }
+
+    .slick-dots {
+        bottom: 10px; /* Ajuste a posição dos pontos */
+    }
+
+    .slick-prev, .slick-next {
+        color: #333; /* Cor das setas */
+    }
+    
+
+    /* Ajuste para mostrar imagens laterais */
+    .slick-slide {
+        opacity: 0.5; /* Diminui a opacidade das imagens não ativas */
+        transition: opacity 0.9s ease;
+    }
+
+    .slick-active {
+        opacity: 1; /* Aumenta a opacidade da imagem ativa */
+        transform: scale(1.5); /* Aplica o zoom na imagem ativa */
+        transition: 2s;
+    }
+
+/*frase do top*/
+
+.frase {
+    text-align: center;
+    opacity: 1;
+    justify-content: center;
+
+    
+}
+
+.color {
+    color: rgb(151, 25, 25);
+    font-weight: bold;
+
+
+}
+.visible{
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+/* PARTE DA CARTA*/
+.background-image {
+    
+    width: 95%;
+    height: 50vh;
+    background-image: url('imagens/imagem_envelope-removebg-preview.png');
+    background-size: cover;
+    transition: filter 1s;
+   
+ }
+
+.blur {
+    filter: blur(5px);
+}
+.focused-image {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    max-width: 80%;
+    max-height: 80%;
+    border: 5px solid white;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+
+/*Stilo de letre*/
+
+.ballet {
+    text-align: center;
+    font-family: "Ballet", serif;
+    font-optical-sizing: auto;
+    font-weight: 700; /* Aumenta a espessura da fonte */
+    font-size: 50px; /* Aumenta o tamanho da fonte */
+    font-style: normal;
+}
+.frase{
+    text-align: center;
+    font-family: "Ballet", serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Aumenta a espessura da fonte */
+    font-size: 28px; /* Aumenta o tamanho da fonte */
+    font-style: normal;
+}
+/*Parte do tempo*/
+.contador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.quadrado {
+    background: #333;
+    color: white;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 2px 2px 30px rgba(65, 148, 208, 0.7);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+.quadrado::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: blur(1px);
+    opacity: transparent;
+}
+h1 {
+    font-size: 2em;
+    margin: 0;
+    text-align: center;
+}
+.tempo {
+    font-size: 1.6em;
+}
+/*MUSIA*/
+.musica {
+    background: #444;
+    color: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 2px 2px 30px rgba(65, 72, 208, 0.7);
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column; /* Organiza os filhos em uma coluna */
+    align-items: center; 
+    
+}
+.letra {
+    font-size: 2em;
+    margin: 0;
+}
+.artista {
+    font-size: 0.8em;
+    color: #bbb;
+}
+}

@@ -1,0 +1,46 @@
+body {
+    .Viagnes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+}
+
+.image-circle {
+    flex: 1 1 42%; /* Ajusta para 2 imagens por linha */    
+    height: 160px; /* Altura fixa */
+    margin: 5px;
+    overflow: hidden;
+    border-radius: 40%;
+    position: relative;    
+    border: 5px solid transparent; /* Borda inicial transparente */
+    background-image: linear-gradient(90deg, rgb(48, 4, 79), indigo, rgb(172, 106, 219),rgb(207, 157, 242),rgb(207, 157, 242),rgb(173, 96, 227),indigo,rgb(48, 4, 79));
+    background-size: 200% 100%; /* Tamanho do fundo para animação */
+    animation: borderAnimation 3s linear infinite; /* Animação da borda */
+}
+
+.image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem para cobrir o círculo */
+    display: block;
+}
+
+/* Animação da borda da esquerda para a direita */
+@keyframes borderAnimation {
+    0% {
+        background-position: 200% 0; /* Começa do lado direito */
+    }
+    100% {
+        background-position: 0 0; /* Termina do lado esquerdo */
+    }
+    
+   
+}
+
+
+
+
+
